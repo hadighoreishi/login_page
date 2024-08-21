@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'package:login_page/pages/counter_page.dart';
+import 'package:login_page/pages/home_page.dart';
+import 'package:login_page/pages/main_page.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -88,7 +90,7 @@ class LoginPage extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => HomePage()));
+                            builder: (context) => MainPage()));
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor:
@@ -109,7 +111,10 @@ class LoginPage extends StatelessWidget {
                   SizedBox(
                     width: 400,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => HomePage()));
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -133,7 +138,10 @@ class LoginPage extends StatelessWidget {
                         backgroundColor: Colors.greenAccent,
                         foregroundColor: Colors.blue,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => CounterPage()));
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
